@@ -1,33 +1,6 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+ballot. 
+Free for personal and commercial use under the GNU Public liscense
 
+ballot. is a free website and application designed to allow users to have easy access to voting elections in their vicinity. By utilizing the Google Civic Informations API, the website intuitively provides voters with the dates, locations, and information about local elections. 
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
+Mission Statement: We developed this website to correct the inbalance between the attention given to the federal government, while the local government gets ignored. You can check when upcoming elections are, which candidates are running, current representatives, and where the closest voting center is. By spreading this information in a clean and concise way, we hope to be able to attract a larger amount of voters to really engage in their civic duty. Change takes place from the bottom up.
