@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Thought Contagion</title>
+		<title>Ballot</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -39,21 +39,20 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Thought Contagion<br/>
+											<h1 style="color: #f56a6a">ballot.<br/>
 											</h1>
 											<p></p>
 										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										
+										<p id="text_update">Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+
 									</div>
-									<span class="image object">
+									<span class="image object" >
 											<iframe
-											width="600"
-											height="450"
+
 											frameborder="0" style="border:0"
 
 											src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk
-											  &q=30024" allowfullscreen>
+											  &q=voting" allowfullscreen>
 										  </iframe>
 									</span>
 								</section>
@@ -68,20 +67,23 @@
 						<div class="inner">
 
 							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" onkeyup="searchFunction()" placeholder="Search" />
-									</form>
-								</section>
+
 
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
 										<h2>Upcoming Elections</h2>
 									</header>
+
+									<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" onkeyup="searchFunction()" placeholder="Search" />
+									</form>
+								</section>
+
 									<ul id="election_list">
-										
-										 
+
+
 									</ul>
 								</nav>
 
