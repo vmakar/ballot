@@ -43,13 +43,46 @@
 											by HTML5 UP</h1>
 											<p>A free and fully responsive site template</p>
 										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<p>
+										<div id="id01"></div>
+										<script>
+
+var xmlhttp = new XMLHttpRequest();
+var url = "https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+										</script>
+										</p>
 										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk
+    &q=30024" allowfullscreen>
+</iframe>
 									</span>
 								</section>
 
@@ -166,8 +199,49 @@
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
+									<script>
+										var names = ["test1", "test2", "test3"];
+										function makeUL(array) {
+											// Create the list element:
+											var list = document.createElement('ul');
+
+											for(var i = 0; i < array.length; i++) {
+												// Create the list item:
+												var div1 = document.createElement('div');
+												div1.id = 'n' + i;
+
+												div1.onclick = fun(i);
+												var item = document.createElement('li').appendChild(div1);
+
+
+
+												// Set its contents:
+												item.appendChild(document.createTextNode(array[i]));
+
+												// Add it to the list:
+												list.appendChild(item);
+											}
+
+											function fun(n) {
+												var myHeading = document.querySelector('h1');
+												myHeading.textContent = names[n];
+											}
+
+											// Finally, return the constructed list:
+											return list;
+										}
+
+										document.getElementById('menu').appendChild(makeUL(names));
+
+
+
+									</script>
+									<ul id="foo">
+										<li><div onClick="fun()" id="n0"></li>
+											<script>
+												var div = document.getElementById("n0");
+												div.textContent = names[0];
+											</script>
 										<li><a href="generic.html">Generic</a></li>
 										<li><a href="elements.html">Elements</a></li>
 										<li>
@@ -194,6 +268,8 @@
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li>
 									</ul>
+
+
 								</nav>
 
 							<!-- Section -->
@@ -225,7 +301,7 @@
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<p>whatever</p>
 									<ul class="contact">
 										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
 										<li class="fa-phone">(000) 000-0000</li>
