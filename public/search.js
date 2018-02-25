@@ -170,8 +170,23 @@ function clicked(num)
     new_text = "<strong> Name of Election: </strong> " + names[num] + "</br>" + "<strong> Date: </strong>" + days[num] + "</br>" + "<strong> State: </strong>" + state[num];
     var body = document.getElementById("text_update");
     var map = document.getElementById("map");
+    while (body.hasChildNodes()) {
+        body.removeChild(body.firstChild);
+    }
     body.innerHTML = new_text;
     map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk&q=voting+centers+" + state[num];
+}
+
+function clickedabout()
+{
+    new_text = "We developed this website to correct the inbalance between the attention given to the federal government, while the local government gets ignored.<br><br>You can check when upcoming elections are, which candidates are running, current representatives, and where the closest voting center is.<br><br>By spreading this information in a clean and concise way, we hope to be able to attract a larger amount of voters to really engage in their civic duty.<br><br>Change takes place from the bottom up.";
+    var body = document.getElementById("text_update");
+    var map = document.getElementById("map");
+    while (body.hasChildNodes()) {
+        body.removeChild(body.firstChild);
+    }
+    body.innerHTML = new_text;
+    map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk&q=voting+centers";
 }
 
 
