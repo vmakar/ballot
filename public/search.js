@@ -119,7 +119,7 @@ var myarr = new Array(len);
 for (k=0; k<len; k++)
 {
   var li = document.createElement("li");
-  var append = " <a href=\"#\">" + names[k] + " <p> "+ days[k] + "  " + state[k] + " </p> </a>";
+  var append = " <a href=\"#\">" + names[k] + " </a>";
   li.innerHTML = append;
   var lid = "li_id"+k.toString();
   li.setAttribute("id", lid);
