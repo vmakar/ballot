@@ -119,8 +119,10 @@ var myarr = new Array(len);
 for (k=0; k<len; k++)
 {
   var li = document.createElement("li");
-  var append = "<li> <a href=\"#\">" + names[k] + " <p> "+ days[k] + "  " + state[k] + " </p> </a></li>";
+  var append = " <a href=\"#\">" + names[k] + " <p> "+ days[k] + "  " + state[k] + " </p> </a>";
   li.innerHTML = append;
+  var lid = "li_id"+k.toString();
+  li.setAttribute("id", lid);
   ul.appendChild(li);
 }
 
@@ -147,12 +149,27 @@ function searchFunction()
 
 
 
+var list;
+for (var t = 0; t < len; t++){
+    list = document.getElementById('li_id'+t);
+    if (typeof window.addEventListener === 'function'){
+        (function (list) {
+            list.addEventListener('click', function(){
+                console.log(list);
+                g = list.id
+                sub = g.substring(5,)
+                console.log(sub);
+                clicked(sub)
+            });
+        })(list);
+    }
+}
 
-
-
-
-
-
-
+function clicked(num)
+{
+    new_text = "<strong> Name of Election: </strong> " + names[num] + "</br>" + "<strong> Date: </strong>" + days[num] + "</br>" + "<strong> State: </strong>" + state[num];
+    var body = document.getElementById("text_update");
+    body.innerHTML = new_text;
+}
 
 
