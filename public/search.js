@@ -31,7 +31,7 @@ for (i = 1; i <= len; i++) {
     state[i-1] = temp[i-1].substring(n,n+2);   
     
 }
-console.log(state)
+console.log(state);
 
 
 function abbrState(input, to){
@@ -105,11 +105,54 @@ function abbrState(input, to){
         }    
     }
 }
-console.log(state.length)
+console.log(state.length);
 for (j = 0; j < state.length; j++) 
 { 
     temp = state[j];
-    console.log(temp)
-    state[j] = abbrState(temp, "name")
+    console.log(temp);
+    state[j] = abbrState(temp, "name");
 }
+var ul = document.getElementById("election_list");
+var myarr = new Array(len);
+
+
+for (k=0; k<len; k++)
+{
+  var li = document.createElement("li");
+  var append = "<li> <a href=\"#\">" + names[k] + " <p> "+ days[k] + "  " + state[k] + " </p> </a></li>";
+  li.innerHTML = append;
+  ul.appendChild(li);
+}
+
+console.log(ul);
+
+function searchFunction()
+{
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('query');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("election_list");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
