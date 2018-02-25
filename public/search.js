@@ -19,7 +19,7 @@ var days = new Array(len);
 var temp = new Array(len);
 var state = new Array(len);
 
-for (i = 1; i <= len; i++) { 
+for (i = 1; i <= len; i++) {
     console.log(i);
     element = firstElement[i];
     ids[i-1] = element.id;
@@ -28,18 +28,18 @@ for (i = 1; i <= len; i++) {
     temp[i-1] = element.ocdDivisionId;
     var n = temp[i-1].indexOf("state:")+6;
     console.log(n);
-    state[i-1] = temp[i-1].substring(n,n+2);   
-    
+    state[i-1] = temp[i-1].substring(n,n+2);
+
 }
 console.log(state);
 
 
 function abbrState(input, to){
-    
+
     var states = [
         ['Arizona', 'AZ'],
         ['Alabama', 'AL'],
-        ['Alaska', 'AK'],        
+        ['Alaska', 'AK'],
         ['Arkansas', 'AR'],
         ['California', 'CA'],
         ['Colorado', 'CO'],
@@ -53,7 +53,7 @@ function abbrState(input, to){
         ['Indiana', 'IN'],
         ['Iowa', 'IA'],
         ['Kansas', 'KS'],
-        ['Kentucky', 'KY'],        
+        ['Kentucky', 'KY'],
         ['Louisiana', 'LA'],
         ['Maine', 'ME'],
         ['Maryland', 'MD'],
@@ -95,19 +95,19 @@ function abbrState(input, to){
             if(states[i][0] == input){
                 return(states[i][1]);
             }
-        }    
+        }
     } else if (to == 'name'){
         input = input.toUpperCase();
         for(i = 0; i < states.length; i++){
             if(states[i][1] == input){
                 return(states[i][0]);
             }
-        }    
+        }
     }
 }
 console.log(state.length);
-for (j = 0; j < state.length; j++) 
-{ 
+for (j = 0; j < state.length; j++)
+{
     temp = state[j];
     console.log(temp);
     state[j] = abbrState(temp, "name");
@@ -169,7 +169,9 @@ function clicked(num)
 {
     new_text = "<strong> Name of Election: </strong> " + names[num] + "</br>" + "<strong> Date: </strong>" + days[num] + "</br>" + "<strong> State: </strong>" + state[num];
     var body = document.getElementById("text_update");
+    var map = document.getElementById("map");
     body.innerHTML = new_text;
+    map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBNkHIUhVlCMVe5ljh68mIJLfk_m4TgFOk&q=voting+centers+" + state[num];
 }
 
 
